@@ -13,9 +13,9 @@ local rawget = rawget
 local require = require
 local tonumber = tonumber
 local tostring = tostring
-local io = { 
-    open = io.open, 
-    popen = io.popen 
+local io = {
+    open = io.open,
+    popen = io.popen
 }
 local setmetatable = setmetatable
 local getmetatable = getmetatable
@@ -64,7 +64,8 @@ function helpers.wrequire(table, key)
 
     local ostable = {
         linux = { "linux", "all" },
-        freebsd = { "freebsd", "bsd", "all" }
+        freebsd = { "freebsd", "bsd", "all" },
+        openbsd = { "openbsd", "bsd", "all" }
     }
 
     local os = ostable[helpers.getos()]
